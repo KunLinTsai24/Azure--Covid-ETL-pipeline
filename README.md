@@ -1,7 +1,5 @@
 # Covid-ETL-pipeline
 
-**Business Report: Automating COVID-19 Data Preparation for Machine Learning and Power BI Reporting Using Azure Data Factory**
-
 **Introduction**
 
 The COVID-19 pandemic has underscored the critical need for timely and accurate data to inform public health decisions and policy-making. Organizations require efficient data pipelines to ingest, transform, and visualize vast amounts of pandemic-related data from various sources. This project aims to automate the data preparation process for COVID-19 datasets using **Azure Data Factory (ADF)**, facilitating machine learning applications and Power BI reporting to support data-driven decisions.
