@@ -1,10 +1,11 @@
 # Covid-ETL-pipeline
 
-**Introduction**
+## Introduction
 
 The COVID-19 pandemic has underscored the critical need for timely and accurate data to inform public health decisions and policy-making. Organizations require efficient data pipelines to ingest, transform, and visualize vast amounts of pandemic-related data from various sources. This project aims to automate the data preparation process for COVID-19 datasets using **Azure Data Factory (ADF)**, facilitating machine learning applications and Power BI reporting to support data-driven decisions.
 
-**Business Requirements**
+---
+## Business Requirements
 
 **The primary objectives of this project are centered around the ETL process:**
 
@@ -13,12 +14,16 @@ The COVID-19 pandemic has underscored the critical need for timely and accurate 
 - **Data Transformation: Cleanse and restructure data to meet analytical and reporting needs.**
 - **Data Loading: Seamlessly load the transformed data into a SQL database for downstream applications.**
 - **Automation and Monitoring: Implement robust automation with error handling, notifications, and the ability to rerun failed processes.**
+---
+## Process Outline
 
-**Solution Architecture**
+### Solution Architecture
 
 **![](https://github.com/KunLinTsai24/Covid-ETL-pipeline/blob/main/img/covid_architecture_solution.png)**
 
-**Data Sources**
+---
+
+### Data Sources
 
 - **Population Data**: "Population by Age" dataset stored in Azure Blob Storage.
 - **European Centre for Disease Prevention and Control (ECDC) Data**:
@@ -26,8 +31,9 @@ The COVID-19 pandemic has underscored the critical need for timely and accurate 
   - **Hospital Admission Data**
   - **Testing Data**
   - **Country Response Data**
+---
 
-**Data Ingestion**
+### Data Ingestion
 
 **Ingesting Population Data**
 
@@ -62,7 +68,9 @@ The COVID-19 pandemic has underscored the critical need for timely and accurate 
 
 ![](https://github.com/KunLinTsai24/Covid-ETL-pipeline/blob/main/img/Ingest%20ECDC.png)
 
-**Data Transformation**
+---
+
+### Data Transformation
 
 Data transformation was performed using **Mapping Data Flows** in Azure Data Factory to prepare the data for analysis and reporting.
 
@@ -103,7 +111,9 @@ Data transformation was performed using **Mapping Data Flows** in Azure Data Fac
 
 ![](https://github.com/KunLinTsai24/Covid-ETL-pipeline/blob/main/img/Hospital%20Admission%20Dataflow.png)
 
-**Data Loading to SQL Database**
+---
+
+### Data Loading to SQL Database
 
 To support machine learning models and Power BI reporting, the transformed data was loaded into an Azure SQL Database.
 
@@ -112,7 +122,9 @@ To support machine learning models and Power BI reporting, the transformed data 
 1. **Table Creation**: Defined and created tables in the SQL Database with appropriate schema matching the transformed data.
 2. **Copy Activity**: Used ADF's **Copy Data** activity to transfer data from ADLS to the SQL Database tables.
 
-**Automation and Monitoring**
+---
+
+### Automation and Monitoring**
 
 To ensure the pipeline runs smoothly and issues are promptly addressed:
 
@@ -120,7 +132,9 @@ To ensure the pipeline runs smoothly and issues are promptly addressed:
 - **Error Handling**: Implemented validation steps and conditional logic to handle data issues gracefully.
 - **Notifications**: Set up alerts and notifications via web activities to inform stakeholders of any failures or anomalies.
 
-**Conclusion**
+---
+
+## Conclusion
 
 By leveraging Azure Data Factory, the project successfully automated the ingestion, validation, transformation, and loading of critical COVID-19 data. This automation:
 
@@ -129,7 +143,8 @@ By leveraging Azure Data Factory, the project successfully automated the ingesti
 - **Enabled Advanced Analytics**: Provided clean and structured data suitable for machine learning models.
 - **Facilitated Informed Decision-Making**: Delivered insightful Power BI reports to support stakeholders in responding to the pandemic.
 
-**Learning Outcome**
+---
+## Learning Outcome
 
 I have mastered various data transformation activities, including filtering irrelevant data to enhance quality and selecting and renaming columns to standardize schemas. Utilizing pivot transformations, I reshaped data to simplify the analysis of key indicators like cases and deaths. I enriched datasets through lookup transformations by adding related information such as country codes and population figures. Additionally, I applied conditional splits to segregate data based on specific conditions for tailored processing, used aggregate transformations to summarize data and identify trends, organized data logically with sort transformations, and combined data from multiple sources using joins for comprehensive analyses.
 
