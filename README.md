@@ -18,7 +18,7 @@ The COVID-19 pandemic has underscored the critical need for timely and accurate 
 
 **Solution Architecture**
 
-**![]()**
+**![](https://github.com/KunLinTsai24/Covid-ETL-pipeline/blob/main/img/covid_architecture_solution.png)**
 
 **Data Sources**
 
@@ -48,7 +48,7 @@ The COVID-19 pandemic has underscored the critical need for timely and accurate 
         - **If False**:
             - **Web Activity**: Sent a notification to a specified URL to alert the team of the validation failure.
 
-![]()
+![](https://github.com/KunLinTsai24/Covid-ETL-pipeline/blob/main/img/Ingest%20population.png)
 
 **Ingesting ECDC Data**
 
@@ -62,7 +62,7 @@ The COVID-19 pandemic has underscored the critical need for timely and accurate 
 4. **ForEach Activity**: Used a **ForEach** loop to iterate over each dataset.
     - Within the loop, a **Copy Activity** ingested each dataset from Blob Storage into ADLS.
 
-![]()
+![](https://github.com/KunLinTsai24/Covid-ETL-pipeline/blob/main/img/Ingest%20ECDC.png)
 
 **Data Transformation**
 
@@ -77,9 +77,9 @@ Data transformation was performed using **Mapping Data Flows** in Azure Data Fac
 5. **Lookup Transformation**: Performed a lookup to the **Country** dimension table to retrieve the two-digit country codes.
 6. **Sink Configuration**: Specified the destination within ADLS for the transformed data.
 
-![]()
+![](https://github.com/KunLinTsai24/Covid-ETL-pipeline/blob/main/img/Case%20%26%20Deaths%20Transform.png)
 
-![]()
+![](https://github.com/KunLinTsai24/Covid-ETL-pipeline/blob/main/img/Case%20%26%20Death%20Dataflow.png)
 
 **Transforming Hospital Admission Data**
 
@@ -99,11 +99,11 @@ Data transformation was performed using **Mapping Data Flows** in Azure Data Fac
     - Grouped data by week number.
     - Calculated the minimum (week start date) and maximum (week end date) dates for each week.
 
-![]()
+![](https://github.com/KunLinTsai24/Covid-ETL-pipeline/blob/main/img/Hospital%20Admission%20Daily%20Transform.png)
 
-![]()
+![](https://github.com/KunLinTsai24/Covid-ETL-pipeline/blob/main/img/Hospital%20Admission%20Weekly%20Transform.png)
 
-![]()
+![](https://github.com/KunLinTsai24/Covid-ETL-pipeline/blob/main/img/Hospital%20Admission%20Dataflow.png)
 
 **Data Loading to SQL Database**
 
