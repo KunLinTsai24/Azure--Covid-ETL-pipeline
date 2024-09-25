@@ -9,11 +9,11 @@ The COVID-19 pandemic has underscored the critical need for timely and accurate 
 
 **The primary objectives of this project are centered around the ETL process:**
 
-- **Efficient Data Ingestion: Automate the extraction of multiple COVID-19 datasets into a centralized data lake.**
-- **Data Validation: Ensure the accuracy and integrity of the ingested data through validation checks.**
-- **Data Transformation: Cleanse and restructure data to meet analytical and reporting needs.**
-- **Data Loading: Seamlessly load the transformed data into a SQL database for downstream applications.**
-- **Automation and Monitoring: Implement robust automation with error handling, notifications, and the ability to rerun failed processes.**
+- **Efficient Data Ingestion**: Automate the extraction of multiple COVID-19 datasets into a centralized data lake.
+- **Data Validation**: Ensure the accuracy and integrity of the ingested data through validation checks.
+- **Data Transformation**: Cleanse and restructure data to meet analytical and reporting needs.
+- **Data Loading**: Seamlessly load the transformed data into a SQL database for downstream applications.
+- **Automation and Monitoring**: Implement robust automation with error handling, notifications, and the ability to rerun failed processes.
 ---
 ## Process Outline
 
@@ -146,6 +146,6 @@ By leveraging Azure Data Factory, the project successfully automated the ingesti
 ---
 ## Learning Outcome
 
-I have mastered various data transformation activities, including filtering irrelevant data to enhance quality and selecting and renaming columns to standardize schemas. Utilizing pivot transformations, I reshaped data to simplify the analysis of key indicators like cases and deaths. I enriched datasets through lookup transformations by adding related information such as country codes and population figures. Additionally, I applied conditional splits to segregate data based on specific conditions for tailored processing, used aggregate transformations to summarize data and identify trends, organized data logically with sort transformations, and combined data from multiple sources using joins for comprehensive analyses.
+I have mastered data transformations such as filtering irrelevant data, standardizing schemas by selecting and renaming columns, reshaping data with pivot transformations for easier analysis of key indicators, enriching datasets with lookups (adding country codes and population figures), applying conditional splits for tailored processing, summarizing data with aggregates to identify trends, organizing data with sorts, and combining multiple sources using joins for comprehensive analyses.
 
-In enhancing pipeline activities, I learned to retrieve metadata for validation checks using the Get Metadata activity, ensuring data integrity before processing. I implemented conditional logic with If Condition activities and automated repetitive tasks with ForEach activities, significantly improving efficiency. Configuring Copy activities allowed for data transfers between various storage services while handling various data formats. I also enhanced monitoring by sending notifications or triggering external services using Web activities. Finally, I managed storage efficiently by removing processed files with Delete activities, preventing redundancy and conserving resources.
+In pipeline activities, I ensured data integrity with Get Metadata validations, implemented conditional logic with If Condition activities, automated repetitive tasks with ForEach loops, configured Copy activities for data transfers across various storage services and formats, enhanced monitoring by sending notifications or triggering external services using Web activities, and managed storage efficiently by deleting processed files with Delete activities.
