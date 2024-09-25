@@ -124,7 +124,7 @@ To support machine learning models and Power BI reporting, the transformed data 
 
 ---
 
-### Automation and Monitoring**
+### Automation and Monitoring
 
 To ensure the pipeline runs smoothly and issues are promptly addressed:
 
